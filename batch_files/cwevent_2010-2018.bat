@@ -13,3 +13,7 @@ cd %data_path%\raw
 %cw_path%\cwevent -f 0-96 -x 0-60 -y 2012 2012*.EV* > %data_path%\CSVs\Postgres\2012Event.csv
 %cw_path%\cwevent -f 0-96 -x 0-60 -y 2011 2011*.EV* > %data_path%\CSVs\Postgres\2011Event.csv
 %cw_path%\cwevent -f 0-96 -x 0-60 -y 2010 2010*.EV* > %data_path%\CSVs\Postgres\2010Event.csv
+
+cd %data_path%\CSVs\Postgres
+copy *Event.csv event_raw.csv
+del ????Event.csv

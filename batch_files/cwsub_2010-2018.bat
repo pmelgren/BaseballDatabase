@@ -13,3 +13,7 @@ cd %data_path%\raw
 %cw_path%\cwsub -f 0-9 -y 2012 2012*.EV* > %data_path%\CSVs\Postgres\2012sub.csv
 %cw_path%\cwsub -f 0-9 -y 2011 2011*.EV* > %data_path%\CSVs\Postgres\2011sub.csv
 %cw_path%\cwsub -f 0-9 -y 2010 2010*.EV* > %data_path%\CSVs\Postgres\2010sub.csv
+
+cd %data_path%\CSVs\Postgres
+copy *sub.csv sub_raw.csv
+del *sub.csv

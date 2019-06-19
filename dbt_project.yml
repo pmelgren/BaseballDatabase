@@ -5,7 +5,7 @@ profile: 'baseball'
 source-paths: ["models"]
 analysis-paths: ["analysis"] 
 test-paths: ["tests"]
-data-paths: ["c:/Data/Retrosheet/CSVs/postgres"]
+data-paths: [C:/Data/Retrosheet/CSVs/Postgres]
 macro-paths: ["macros"]
 
 target-path: "target"  # directory which will store compiled SQL files
