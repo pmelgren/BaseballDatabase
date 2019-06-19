@@ -1,0 +1,20 @@
+name: 'BaseballDatabase'
+version: '1.0'
+profile: 'baseball'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"] 
+test-paths: ["tests"]
+data-paths: ["c:/Data/Retrosheet/CSVs/postgres"]
+macro-paths: ["macros"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+    - "target"
+    - "dbt_modules"
+
+models:
+  my_new_package:
+      # Applies to all files under models/example/
+      example:
+          materialized: view
