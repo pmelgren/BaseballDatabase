@@ -1,0 +1,7 @@
+from stg_events ev
+			left join rs.event_result_lk res
+				on res.event_result_lk = ev.event_cd
+			left join rs.base_state_lk bss
+				on bss.base_state_lk = ev.start_bases_cd
+			left join rs.base_state_lk bse
+				on bse.base_state_lk = ev.end_bases_cd
