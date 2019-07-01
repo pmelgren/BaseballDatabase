@@ -18,15 +18,15 @@ branch instead.
 In order to set up a baseball database on your local computer, you'll need to 
 install [PostgreSQL](https://www.postgresql.org/), [Chadwick](http://chadwick.sourceforge.net/doc/index.html), 
 and [RetroSheet](https://www.retrosheet.org/).
-*Download PostgreSQL [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads),
+* **PostgreSQL** Download PostgreSQL [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads),
 Go with the default options whereever possible and make sure you select PgAdmin 
 4 when prompted to select components. 
-*Download RetroSheet data [here](https://www.retrosheet.org/game.htm). This 
+* **RetroSheet Data** Download RetroSheet data [here](https://www.retrosheet.org/game.htm). This 
 tutorial uses the event files from 2010-2018 but you should be able to adapt the 
 code to work for any years and type of file. When you extract the zip file, put 
 the data in a folder called Retrosheet and a subfolder called raw. My full 
 directory is C:\Data\RetroSheet\raw
-*Install Chadwick Software [here](https://github.com/chadwickbureau/chadwick/releases).
+* **Chadwick** Install Chadwick Software [here](https://github.com/chadwickbureau/chadwick/releases).
 Download chadwick-[...]-win.zip and extract to any folder you like. (I'm using 
 C:\projects\baseball\database\chadwick). Once you have extracted the zip folder
 you are ready to use the chadwick tools, no installation is required.
