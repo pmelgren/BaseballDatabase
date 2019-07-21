@@ -1,3 +1,5 @@
+# BaseballDatabase
+
 ## Set up a Baseball Database
 
 `BaseballDatabase` contains the files and instructions on how to set up your 
@@ -25,8 +27,12 @@ Go with the default options whereever possible and make sure you select PgAdmin
 tutorial uses the event files from 2010-2018 but you should be able to adapt the 
 code to work for any years and type of file. When you extract the zip file, put 
 the data in a folder called Retrosheet and a subfolder called raw. My full 
-directory is C:\Data\RetroSheet\raw
+directory is C:\Data\RetroSheet\raw.
 * **Chadwick** Install Chadwick Software [here](https://github.com/chadwickbureau/chadwick/releases).
 Download chadwick-[...]-win.zip and extract to any folder you like. (I'm using 
 C:\projects\baseball\database\chadwick). Once you have extracted the zip folder
 you are ready to use the chadwick tools, no installation is required.
+
+### Transform the Raw Data
+Before the RetroSheet data can be inserted into SQL, it needs to be transformed 
+into a table structure by Chadwick. 
