@@ -5,6 +5,15 @@
 `BaseballDatabase` contains the files and instructions on how to set up your 
 own baseball database.
 
+10 years ago Colin Wyers wrote what I consider to be the [most useful article](https://tht.fangraphs.com/databases-for-sabermetricians-part-one/)
+for anyone trying to learn the skills of a  baseball analyst. However, no update 
+has been made to that information in 10 years, which is far too long for anything  
+related to this type of technology. So I wanted to create this repo to provide the 
+same information in a context that is a little more up-to-date. Obviously this 
+repo owes a huge debt of gratitude to Mr Wyers, but I also hope that the tools here
+are a little more flexible and up-to-date for anyone looking to take their analysis
+beyond what is described in that article. 
+
 These instructions focus specifically on setting up a local SQL database 
 with Retrosheet data. If you have no experience managing an SQL database this 
 will get you started writing queries to answer baseball questions while also 
@@ -55,7 +64,7 @@ year you want data for in the CSVs folder of your data directory.
 With the data transformed by Chadwick, all we need to do now is bring it into SQL.
 This tutorial walks you through the traditional way to do so using SQL Bulk Insert
 statements. There are a wide variety of tools which can automate much of this step,
-most notably [DBT](https://www.getdbt.com/), but lucky for you, the code you need
+most notably [DBT](https://www.getdbt.com/). But lucky for you, the code you need
 is already in this repository, so all you need to do is to run it. 
 * Open pgadmin 4, which should have been installed on your computer when you installed
 PostgreSQL. There may be some setup steps to go through if you're opening it for
@@ -67,20 +76,20 @@ sources). Within that database you can create different schemas for each differe
 source. In this tutorial we'll be using a schema called "rs" but you can call yours
 whatever you want. You can also put the "rs" schema right into the default "postgres" 
 database instead of creating a separate database for baseball.
-* To create a new database, look in the panel on the left under Servers > Postgres 11 > Databases (1) 
-and right click on Databases(1). Select Create > Database... and create a new database
-called Baseball.
+* To create a new database, look in the panel on the left under _Servers_ > _Postgres 11_ > _Databases (1)_ 
+and right click on _Databases(1)_. Select _Create_ > _Database..._ and create a 
+new database called Baseball.
 * With the new database created, expand it from the panel on the right and right 
-click on schemas then select Create > Schema... to create a new schema called "rs".
-*Once you have this structure set up, you can run the create table and bulk insert 
-scripts found in this repository. Make sure that the Baseball database is highlighted 
+click on schemas then select _Create_ > _Schema..._ to create a new schema called "rs".
+* Once you have this structure set up, you can run the create table and bulk insert 
+scripts found in this repository. Make sure that the _Baseball_ database is highlighted 
 in the panel on the left then click on the icon that looks like a lightening bolt 
-next to where it says "Browser". This opens your editor.
+next to where it says _Browser_. This opens your editor.
 * From the editor, click the open icon to open your files from this repository, 
-open the file create_table.sql and hit F5 to run this file.
-* Finally open the file bulk_inserts.csv and run that file as well. This script does 
+open the file `create_table.sql` and hit F5 to run this file.
+* Finally open the file `bulk_inserts.csv` and run that file as well. This script does 
 the heavy lifting to bring the data in from the csv's created in the previous sections.
-* You can optionally use the create_look_tables.sql script to create lookup tables
+* You can optionally use the `create_look_tables.sql` script to create lookup tables
 that are used to clarify the meaning of a few of the columns (such as event code).
 
 ### That's It!
