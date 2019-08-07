@@ -7,10 +7,10 @@ own baseball database.
 
 10 years ago Colin Wyers wrote what I consider to be the [most useful article](https://tht.fangraphs.com/databases-for-sabermetricians-part-one/)
 for anyone trying to learn the skills of a  baseball analyst. However, no update 
-has been made to that information in 10 years, which is far too long for anything  
+has been made to that information in 10 years, which is far too long for anything 
 related to this type of technology. So I wanted to create this repo to provide the 
 same information in a context that is a little more up-to-date. Obviously this 
-repo owes a huge debt of gratitude to Mr Wyers, but I also hope that the tools here
+repo owes a huge debt of gratitude to Colin Wyers, but I also hope that the tools here
 are a little more flexible and up-to-date for anyone looking to take their analysis
 beyond what is described in that article. 
 
@@ -30,7 +30,7 @@ In order to set up a baseball database on your local computer, you'll need to
 install [PostgreSQL](https://www.postgresql.org/), [Chadwick](http://chadwick.sourceforge.net/doc/index.html), 
 and [RetroSheet](https://www.retrosheet.org/).
 * **PostgreSQL** Download PostgreSQL [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads),
-Go with the default options whereever possible and make sure you select PgAdmin 
+Go with the default options wherever possible and make sure you select PgAdmin 
 4 when prompted to select components. 
 * **RetroSheet Data** Download RetroSheet data [here](https://www.retrosheet.org/game.htm). This 
 tutorial uses the event files from 2010-2018 but you should be able to adapt the 
@@ -63,9 +63,10 @@ year you want data for in the CSVs folder of your data directory.
 ### Bring the Data into your SQL tables.
 With the data transformed by Chadwick, all we need to do now is bring it into SQL.
 This tutorial walks you through the traditional way to do so using SQL Bulk Insert
-statements. There are a wide variety of tools which can automate much of this step,
-most notably [DBT](https://www.getdbt.com/). But lucky for you, the code you need
-is already in this repository, so all you need to do is to run it. 
+statements. If you want to be cutting-edge, there are a wide variety of tools which 
+can automate much of this step, my preference being [DBT](https://www.getdbt.com/). 
+But lucky for you, the code you need is already in this repository, so all you need 
+to do is run it. 
 * Open pgadmin 4, which should have been installed on your computer when you installed
 PostgreSQL. There may be some setup steps to go through if you're opening it for
 the first time.
